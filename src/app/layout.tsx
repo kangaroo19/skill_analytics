@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Content, Header, MainLayout } from "@layout";
 
 const SpoqaThin = localFont({
   src: "./fonts/SpoqaHanSansNeo-Thin.woff2",
@@ -37,7 +38,10 @@ export default function RootLayout({
       <body
         className={` ${SpoqaThin.variable} ${SpoqaRegular.variable} ${SpoqaBold.variable} antialiased`}
       >
-        {children}
+        <MainLayout>
+          <Header />
+          <Content>{children}</Content>
+        </MainLayout>
       </body>
     </html>
   );
