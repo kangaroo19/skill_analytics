@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Inner, Header, Container } from "@layout";
 
+
 const SpoqaThin = localFont({
   src: "./fonts/SpoqaHanSansNeo-Thin.woff2",
   variable: "--font-spoqa-thin",
