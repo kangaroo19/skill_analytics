@@ -1,8 +1,3 @@
-## git branch
-- main : main 브랜치
-- dev : 개발용
-- prod : 테스트배포용
-
 ## commit message
 - feat: 새로운 기능을 추가
 
