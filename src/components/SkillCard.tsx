@@ -1,12 +1,5 @@
 import Image from "next/image";
 import { Card, Progress } from "./ui";
-import { ReactNode } from "react";
-
-interface SkillCardPropTypes {
-  skillName: string;
-  count: number;
-  frequency: number;
-}
 
 export default function SkillCard({
   skillName,

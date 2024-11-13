@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Inner, Header, Container } from "@layout";
+import TanstackProvider from "@/lib/TanstackProvider";
 
 const SpoqaThin = localFont({
   src: "./fonts/SpoqaHanSansNeo-Thin.woff2",
@@ -38,10 +39,12 @@ export default function RootLayout({
       <body
         className={` ${SpoqaThin.variable} ${SpoqaRegular.variable} ${SpoqaBold.variable} antialiased`}
       >
-        <Container>
-          <Header />
-          <Inner>{children}</Inner>
-        </Container>
+        <TanstackProvider>
+          <Container>
+            <Header />
+            <Inner>{children}</Inner>
+          </Container>
+        </TanstackProvider>
       </body>
     </html>
   );
