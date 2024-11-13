@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <div className="font-spoqa-regular">
       <PageHeader>홈</PageHeader>
-      <SkillCard />
     </div>
   );
 }
