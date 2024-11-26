@@ -1,6 +1,6 @@
 export const fetchData = async (): Promise<SkillCardPropTypes[]> => {
   const response = await fetch(
-    "http://localhost:5555/skills-frequency/2/2024_11_11"
+    "http://localhost:5555/skills-frequency/2/2024_11_26"
   );
 
   if (!response.ok) {

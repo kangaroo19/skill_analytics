@@ -21,8 +21,9 @@ export default function Home() {
   return (
     <div className="font-spoqa-regular">
       <PageHeader>홈</PageHeader>
-      {data?.map((item) => (
+      {data?.map((item, idx) => (
         <SkillCard
+          ranking={idx + 1}
           skillName={item.skillName} // data에서 skillName을 매핑
           count={item.count} // data에서 count를 매핑
           frequency={item.frequency} // data에서 frequency를 매핑
