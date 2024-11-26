@@ -7,7 +7,7 @@ export default function SkillCard({
   frequency,
 }: SkillCardPropTypes) {
   return (
-    <Card.Card className="flex w-full items-center space-x-4 p-2 rounded-lg">
+    <Card.Card className="flex w-full items-center space-x-4 p-2 my-4 rounded-lg">
       <span className="text-3xl font-spoqa-regular">1</span>
       <Image
         src={`https://cdn.simpleicons.org/${skillName.toLowerCase()}`}
