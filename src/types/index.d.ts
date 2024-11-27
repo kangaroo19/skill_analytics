@@ -1,4 +1,4 @@
-declare interface SkillCardPropTypes {
+declare interface SkillCardPropTypest {
   ranking:number;
   skillName: string;
   count: number;

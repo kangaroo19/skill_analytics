@@ -1,12 +1,12 @@
 "use client";
 
 import PageHeader from "@/components/PageHeader";
-import SkillCard from "@/components/SkillCard";
+import { SkillCard } from "@/features/skillFrequency";
 import { fetchData } from "@/lib/query/fetchSkillFrequency";
 import { useQuery } from "@tanstack/react-query";
 
 export default function Home() {
-  const { data, isLoading, error } = useQuery<SkillCardPropTypes[]>({
+  const { data, isLoading, error } = useQuery<SkillCardPropTypest[]>({
     queryKey: ["data"], // 데이터 키를 설정합니다.
     queryFn: fetchData,
   });
