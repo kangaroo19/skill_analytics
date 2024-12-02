@@ -1,1 +1,2 @@
-export * as SkillCard from "./components/SkillCard";
+export { default as SkillList } from "./ui/SkillList";
+export * from "./types";

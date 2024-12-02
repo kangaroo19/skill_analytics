@@ -1,6 +1,8 @@
-export const fetchData = async (): Promise<SkillCardPropTypes[]> => {
+import { SkillCardPropTypes } from "../types";
+
+export const fetchSkillList = async (): Promise<SkillCardPropTypes[]> => {
   const response = await fetch(
-    "http://localhost:5555/skills-frequency/2/2024_11_26"
+    "http://localhost:5555/skills-frequency/2/2024_12_02"
   );
 
   if (!response.ok) {
