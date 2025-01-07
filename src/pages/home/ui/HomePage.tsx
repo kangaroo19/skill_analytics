@@ -1,9 +1,12 @@
+import PageHeader from "@/components/PageHeader";
+import PositionButton from "@/features/skillFrequency/ui/PositionButton";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="font-spoqa-regular">
-      고 프론트페이지<Link href="/front">123</Link>
+      <PageHeader>홈</PageHeader>
+      <PositionButton />
     </div>
   );
 }
