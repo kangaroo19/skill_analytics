@@ -4,7 +4,7 @@ export default function Inner({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="mt-10 p-4 box-border w-[500px] min-h-screen overflow-y-hidden relative bg-[#f9fafb]">
+    <div className="pt-10 p-4 box-border  min-h-screen overflow-y-hidden relative bg-[#f9fafb] bg-gradient-to-b from-blue-100 to-blue-500">
       {children}
     </div>
   );
