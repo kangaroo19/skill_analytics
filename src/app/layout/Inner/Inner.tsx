@@ -3,9 +3,5 @@ export default function Inner({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <div className="pt-10 p-4 box-border  min-h-screen overflow-y-hidden relative bg-[#f9fafb] bg-gradient-to-b from-blue-100 to-blue-500">
-      {children}
-    </div>
-  );
+  return <div className="pt-14 p-4 box-border  min-h-screen overflow-y-hidden relative bg-[#cee8ff]">{children}</div>;
 }

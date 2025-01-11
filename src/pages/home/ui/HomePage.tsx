@@ -9,9 +9,11 @@ export default function Home() {
     <div className="font-spoqa-regular mt-4">
       <PageHeader>개발자 채용 공고를 크롤링해 기술 스택 통계를 분석하고 시각화하는 웹 애플리케이션 이에요.</PageHeader>
       <Image src="/landingImage.png" width={500} height={500} alt="Picture of the author" />
-      <Link href="/front">
-        <Button className="w-full py-4">시작하기</Button>
-      </Link>
+      <div className="flex justify-center w-full">
+        <Link href="/front" className="w-1/2">
+          <Button className="w-full py-6 my-auto mx-0 rounded-xl">시작하기</Button>
+        </Link>
+      </div>
     </div>
   );
 }
