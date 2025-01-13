@@ -12,7 +12,7 @@ export default function PositionButton() {
   };
   return (
     <div className="flex space-x-4 py-2" onClick={onClickRoutes}>
-      <Button variant="outline" name="front">
+      <Button variant="outline" name="frontend">
         프론트엔드
       </Button>
       <Button variant="outline" name="backend">

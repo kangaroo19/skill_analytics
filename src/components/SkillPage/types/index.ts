@@ -1,5 +1,5 @@
 export interface SkillCardPropTypes {
-  ranking: number;
+  ranking?: number;
   skillName: string;
   count: number;
   frequency: number;

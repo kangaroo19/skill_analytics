@@ -1,15 +1,21 @@
-import { SkillCardPropTypes } from "../types";
+"use client";
+
 import { useQuery } from "@tanstack/react-query";
 import { Card, Progress } from "@/components/ui";
 import Image from "next/image";
-import { getSkillList } from "../api/getSkillList";
+import { getSkillList } from "../../api/getSkillList";
 import { useState } from "react";
 import setImageSrc from "@/features/skillFrequency/utils/setImageSrc";
+import { SkillCardPropTypes } from "../../types";
 
-export default function SkillList() {
+interface SkillListProps {
+  skillID: number;
+}
+
+export default function SkillList({ skillID }: SkillListProps) {
   const { data, isLoading, error } = useQuery<SkillCardPropTypes[]>({
     queryKey: ["data"], // 데이터 키를 설정합니다.
-    queryFn: () => getSkillList(1),
+    queryFn: () => getSkillList(skillID),
   });
   if (isLoading) {
     return <div>로딩중...</div>;

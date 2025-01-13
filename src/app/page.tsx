@@ -1,8 +1,8 @@
 "use client";
 
-import PageHeader from "@/components/PageHeader";
+import PageHeader from "@/components/SkillPage/ui/components/PageHeader";
 import { SkillList } from "@/features/skillFrequency";
-import PositionButton from "@/features/skillFrequency/ui/PositionButton";
+import PositionButton from "@/components/SkillPage/ui/components/PositionButton";
 
 export default function Home() {
   return (
