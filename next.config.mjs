@@ -4,6 +4,7 @@ const nextConfig = {
     domains: ["cdn.simpleicons.org"],
     dangerouslyAllowSVG: true,
   },
+  reactStrictMode: false, 
 };
 
 export default nextConfig;
