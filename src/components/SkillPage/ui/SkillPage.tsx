@@ -6,6 +6,7 @@ interface SkillPageProps {
 }
 
 export default function SkillPage({ title, skillID }: SkillPageProps) {
+  console.log(title);
   return (
     <>
       <PageHeader>{title}</PageHeader>

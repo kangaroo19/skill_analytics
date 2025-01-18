@@ -13,7 +13,6 @@ export const getSkillList = async (type: number): Promise<SkillCardPropTypes[]> 
   }
 
   const rawData = await response.json();
-  console.log(rawData.slice(0, 3));
   // 필드 이름 매핑
   return rawData.map((item: any) => ({
     skillName: item.skill_name, // API의 skill_name을 skillName으로 매핑
