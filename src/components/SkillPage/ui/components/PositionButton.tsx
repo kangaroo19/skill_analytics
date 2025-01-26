@@ -2,7 +2,8 @@
 
 import { Button } from "@/components/ui";
 import { useRouter } from "next/navigation";
-export default function PositionButton() {
+import { memo } from "react";
+function PositionButton() {
   const router = useRouter();
   const onClickRoutes = (event: React.MouseEvent<HTMLDivElement>) => {
     const { name } = event.target as HTMLButtonElement;
@@ -27,3 +28,5 @@ export default function PositionButton() {
     </div>
   );
 }
+
+export default memo(PositionButton);

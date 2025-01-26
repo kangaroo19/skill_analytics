@@ -3,14 +3,13 @@ import Image from "next/image";
 import { SkillCardPropTypes } from "../../types";
 import setImageSrc from "../../utils/setImageSrc";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const SkillCard: React.FC<SkillCardPropTypes> = ({ ranking, skillName, count }) => {
   const router = useRouter();
   console.log(router);
 
   const [imageSrc, setImageSrcState] = useState(setImageSrc(skillName));
-  useEffect(() => {}, [router]);
   return (
     <Card.Card className="flex w-full items-center space-x-4 py-2 px-4 my-4 rounded-lg">
       <span className="text-center text-3xl font-spoqa-regular w-10">{ranking}</span>
@@ -19,7 +18,9 @@ const SkillCard: React.FC<SkillCardPropTypes> = ({ ranking, skillName, count }) 
         width={50}
         height={50}
         alt={`${skillName} Icon`}
-        onError={() => setImageSrcState("/noImg.png")} // 기본 이미지 경로 설정
+        onError={(e) => {
+          setImageSrcState("/noImg.png");
+        }}
       />
       <Card.CardHeader className="flex-1 p-2">
         <Card.CardTitle className="text-lg">{skillName}</Card.CardTitle>
