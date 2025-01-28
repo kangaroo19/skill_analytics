@@ -1,4 +1,6 @@
+import { Suspense } from "react";
 import { PageHeader, PositionButton, SkillList } from "./components";
+import SkeletonList from "./components/SkeletonList";
 
 interface SkillPageProps {
   title: string;
@@ -10,7 +12,9 @@ export default function SkillPage({ title, skillID }: SkillPageProps) {
     <>
       <PageHeader>{title}</PageHeader>
       <PositionButton />
-      <SkillList skillID={skillID} />
+      <Suspense fallback={<SkeletonList />}>
+        <SkillList skillID={skillID} />
+      </Suspense>
     </>
   );
 }
