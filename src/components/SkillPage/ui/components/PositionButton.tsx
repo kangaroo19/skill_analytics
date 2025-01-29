@@ -13,7 +13,7 @@ function PositionButton() {
   };
   return (
     <div className="flex space-x-4 py-2" onClick={onClickRoutes}>
-      <Button variant="outline" name="frontend">
+      <Button variant="secondary" name="frontend" className="bg-blue-500 text-white hover:bg-blue-600">
         프론트엔드
       </Button>
       <Button variant="outline" name="backend">
