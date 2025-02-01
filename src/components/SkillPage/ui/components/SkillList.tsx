@@ -11,7 +11,7 @@ interface SkillListProps {
 
 export default function SkillList({ skillID }: SkillListProps) {
   const { data } = useSuspenseQuery<SkillCardPropTypes[]>({
-    queryKey: ["data", skillID], // skillID를 포함해 데이터 키 설정
+    queryKey: ["skillList", skillID], // skillID를 포함해 데이터 키 설정
     queryFn: () => getSkillList(skillID),
   });
 
