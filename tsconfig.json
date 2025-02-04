@@ -38,7 +38,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "src/app/api/skill-list/route.js"  ],
+, "src/app/api/skill-list/route.ts"  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import mysql from "mysql2/promise";
 
 // MySQL 커넥션 풀 설정
@@ -10,7 +10,7 @@ const pool = mysql.createPool({
 });
 
 // GET 요청 처리
-export async function GET(req) {
+export async function GET(req: NextRequest) {
   try {
     // URL에서 검색 파라미터 가져오기
     const { searchParams } = new URL(req.url);
@@ -30,10 +30,9 @@ export async function GET(req) {
 
     try {
       // 전체 개수 조회
-      const [[{ totalItems }]] = await connection.query(
+      const [[{ totalItems }]] = await connection.query<any>(
         `SELECT COUNT(*) AS totalItems FROM skills_frequency_${jobCategory}_${formattedDate}`
       );
-      console.log(totalItems);
       // 페이지네이션 적용하여 데이터 조회
       const [rows] = await connection.query(
         `SELECT * FROM skills_frequency_${jobCategory}_${formattedDate} 

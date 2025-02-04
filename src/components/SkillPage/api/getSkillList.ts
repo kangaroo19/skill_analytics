@@ -6,8 +6,9 @@ import { SkillCardPropTypes } from "../types";
  * @returns
  */
 export const getSkillList = async (type: number): Promise<SkillCardPropTypes[]> => {
-  const response = await fetch(`http://localhost:5555/skills-frequency?jobCategory=${type}&date=2025-01-13&page=1&limit=10`);
-
+  const response = await fetch(
+    `http://localhost:3000/api/skill-list?jobCategory=${type}&date=2025-01-13&page=1&limit=10`
+  );
   if (!response.ok) {
     throw new Error("데이터를 가져오는 데 실패했습니다.");
   }
