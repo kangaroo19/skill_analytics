@@ -12,9 +12,9 @@ export default function SkillPage({ title, skillID }: SkillPageProps) {
     <>
       <PageHeader>{title}</PageHeader>
       <PositionButton />
-      <Suspense fallback={<SkeletonList />}>
+      {/* <Suspense fallback={<SkeletonList />}> */}
         <SkillList skillID={skillID} />
-      </Suspense>
+      {/* </Suspense> */}
     </>
   );
 }

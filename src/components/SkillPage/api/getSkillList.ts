@@ -5,9 +5,9 @@ import { SkillCardPropTypes } from "../types";
  * @param type 어떤 직무 보여줄지
  * @returns
  */
-export const getSkillList = async (type: number): Promise<SkillCardPropTypes[]> => {
+export const getSkillList = async (type: number, page: number): Promise<SkillCardPropTypes[]> => {
   const response = await fetch(
-    `http://localhost:3000/api/skill-list?jobCategory=${type}&date=2025-01-13&page=1&limit=10`
+    `http://localhost:3000/api/skill-list?jobCategory=${type}&date=2025-01-13&page=${page}&limit=10`
   );
   if (!response.ok) {
     throw new Error("데이터를 가져오는 데 실패했습니다.");
