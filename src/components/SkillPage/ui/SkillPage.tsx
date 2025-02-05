@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { PageHeader, PositionButton, SkillList } from "./components";
 import SkeletonList from "./components/SkeletonList";
+import ReactFloatingProfile from "react-floating-profile";
 
 interface SkillPageProps {
   title: string;
@@ -10,10 +11,11 @@ interface SkillPageProps {
 export default function SkillPage({ title, skillID }: SkillPageProps) {
   return (
     <>
+      <ReactFloatingProfile />
       <PageHeader>{title}</PageHeader>
       <PositionButton />
       {/* <Suspense fallback={<SkeletonList />}> */}
-        <SkillList skillID={skillID} />
+      <SkillList skillID={skillID} />
       {/* </Suspense> */}
     </>
   );
